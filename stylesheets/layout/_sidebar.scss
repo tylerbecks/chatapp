@@ -1,6 +1,7 @@
 .Sidebar {
   display: flex;
   flex-direction: column;
+  flex: 1;
   height: 100%;
   background-color: $brand-color;
   color: $offset-color;
@@ -9,4 +10,14 @@
     margin-top: 15px;
     color: $accent-color;
   }
+}
+.changeNameForm {
+  background-color: transparent;
+  border: none;
+  color: white;
+  display: block;
+}
+.changeNameForm:focus, .changeNameForm:hover {
+  outline: none;
+  border-bottom: 1px white solid;
 }

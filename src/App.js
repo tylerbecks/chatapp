@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import $ from 'jquery';
-import Sidebar from './Sidebar'
-import MessageBox from './MessageBox'
+import json from '../fixtures/fakedata.json';
+import Sidebar from './Sidebar';
+import MessageBox from './MessageBox';
+
+
 
 class App extends Component {
   constructor(props) {
@@ -24,16 +26,9 @@ class App extends Component {
   }
 
   componentWillMount() {
-    $.getJSON('/fixtures/fakedata.json', data => {
-        console.log("success");
-        console.log(data);
-    }).done(() => {
-        console.log("another success message");
-    }).fail(() => {
-        console.error("error");
-    }).always(() => {
-        console.info("complete");
-    });
+    this.setState({
+      messages: json.messages,
+    })
   }
 
   handleChangeName(e) {
@@ -52,7 +47,6 @@ class App extends Component {
 
   handleSubmitMessage(e) {
     e.preventDefault()
-    //TODO: add to JSON data
     this.setState({
       message: '',
     })

@@ -5,14 +5,13 @@ class Sidebar extends Component {
     return (
       <div className="Sidebar">
         <h2>Tiny Chat</h2>
-        <strong>You are logged in as:</strong>
-        <span>{this.props.username}</span>
+        <strong>Your username:</strong>
         <form>
-          Change username: 
           <input 
             className="changeNameForm"
             type="text"
             name="changeName"
+            value={this.props.username}
             onChange={this.props.handleChangeName}
           >
           </input>          

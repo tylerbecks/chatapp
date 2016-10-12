@@ -2,7 +2,7 @@
 
 Please write the frontend for a basic chat application using your favorite JS framework.
 
-Here is some /fixtures/fakedata.json to start you off (you can modify the data, if you wish), and some stub code with basic libraries and icons (you don't have to use them if you don't want to, they're just there as a resource). 
+Here is some /fixtures/fakedata.json to start you off (you can modify the data, if you wish), and some stub code with basic libraries and icons (you don't have to use them if you don't want to, they're just there as a resource).
 
 You can use any open source JS/CSS/etc libraries that you like, just either link them using a CDN or include them in the package you send back.
 

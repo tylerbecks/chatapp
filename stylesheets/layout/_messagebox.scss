@@ -1,9 +1,9 @@
 .Messagebox {
   display: flex;
   flex-direction: column;
+  flex: 5;
   justify-content: space-between;
   height: 100%;
-  flex: 1;
   h2 {
     margin: 15px 0;
   }
@@ -11,34 +11,33 @@
 
 .infobox {
   border-bottom: 1px $brand-color solid;
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 
-.messagesArea {
-  padding: 30px;
+#messagesArea {
+  padding: 15px 30px;
+  overflow-y: scroll;  
+}
+.MessageForm {
   form {
     display: flex;
+    height: 2.5rem;
   }
-  .messagefield {
-    flex: 5;
-    border-top-left-radius: 7px;
-    border-bottom-left-radius: 7px;
-    color: $text-color;
-  }
-  .messagefield:focus {
-    outline: none;
-  }
-  .messagesubmit {
-    flex: 1;
-    background-color: $accent-color;
-    color: $offset-color;
-    border: none;
-    border-top-right-radius: 7px;
-    border-bottom-right-radius: 7px;
-  }
-  .messagesubmit:hover {
-    background-color: #ff5a4c;
-    cursor: pointer;
-  }
+}
+.messagefield {
+  flex: 5;
+  color: $text-color;
+}
+.messagefield:focus {
+  outline: none;
+}
+.messagesubmit {
+  flex: 1;
+  background-color: $accent-color;
+  color: $offset-color;
+  border: none;
+}
+.messagesubmit:hover {
+  background-color: #ff5a4c;
+  cursor: pointer;
 }
