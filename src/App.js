@@ -1,9 +1,17 @@
 import React, { Component } from 'react';
-import Navbar from './Navbar'
 import Sidebar from './Sidebar'
 import MessageBox from './MessageBox'
 
 class App extends Component {
+  constructor(props) {
+    super();
+    this.state = {
+      conversations: {},
+      message: '',
+      username: '',
+    }
+  }
+
   render() {
     return (
       <div className="App">

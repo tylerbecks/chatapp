@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Message from './Message';
 
 class Messagebox extends Component {
   render() {
@@ -7,8 +8,9 @@ class Messagebox extends Component {
         <div className="infobox">
           <h2>Thomas</h2>
         </div>
-        <p>Hey dude!</p>
-        <p>What's cracking?</p>
+        {this.props.messages.map(message => (
+          <Message username={this.props.username} message={message.text} type={message.type}/>
+        ))}
       </div>
     );
   }
