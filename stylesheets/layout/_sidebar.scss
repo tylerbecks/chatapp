@@ -4,4 +4,9 @@
   height: 100%;
   background-color: $brand-color;
   color: $offset-color;
+  padding: 15px;
+  h2 {
+    margin-top: 15px;
+    color: $accent-color;
+  }
 }

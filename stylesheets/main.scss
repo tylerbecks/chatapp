@@ -22,10 +22,10 @@
 @import
   'layout/app',
   'layout/sidebar',
-  'layout/messagebox',
-  'layout/header';
+  'layout/messagebox';
 
 // 5. Components
 @import
   'components/message',
+  'components/form',
   'components/button';

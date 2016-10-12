@@ -1,16 +1,24 @@
 import React, { Component } from 'react';
 import Message from './Message';
+import MessageForm from './MessageForm';
 
 class Messagebox extends Component {
   render() {
     return (
       <div className="Messagebox">
         <div className="infobox">
-          <h2>Thomas</h2>
+          <h2>Tiny Chat Room</h2>
         </div>
-        {this.props.messages.map(message => (
-          <Message username={this.props.username} message={message.text} type={message.type}/>
-        ))}
+        <div className="messagesArea">
+          {this.props.messages.map((message, i) => (
+            <Message author={message.author} content={message.content} key={i} />
+          ))}
+          <MessageForm
+            message={this.props.message}
+            handleChangeMessage={this.props.handleChangeMessage}
+            handleSubmitMessage={this.props.handleSubmitMessage}
+          />
+        </div>
       </div>
     );
   }
