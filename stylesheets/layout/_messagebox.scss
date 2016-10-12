@@ -1,0 +1,15 @@
+.Messagebox {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 1;
+  h2 {
+    margin: 15px 0;
+  }
+}
+
+.infobox {
+  border-bottom: 1px $brand-color solid;
+  display: flex;
+  justify-content: center;
+}
