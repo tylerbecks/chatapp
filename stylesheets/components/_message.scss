@@ -1,9 +1,14 @@
+.Message {
+  @include transition();
+}
 .Message:hover {
   background-color: $light-grey;
+  padding-left: 0.3rem;
 }
 .messageBody {
   display: block;
   font-size: 1rem;
+  padding-left: 0.3rem;
 }
 .date {
   color: #9e9ea6;
