@@ -10,8 +10,8 @@
 }
 
 .infobox {
-  border-bottom: 1px $brand-color solid;
   text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
 }
 
 #messagesArea {

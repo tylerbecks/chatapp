@@ -16,14 +16,14 @@ class Messagebox extends Component {
           <h2>Tiny Chat Room</h2>
         </div>
         <div id="messagesArea">
-          {this.props.messages.map((message, i) => (
-            <Message
+          {this.props.messages.map((message, i) => {
+            return <Message
               author={message.author}
               content={message.content}
               timestamp={message.timestamp}
               key={i}
-            />
-          ))}
+            />;
+          })}
         </div>
         <MessageForm
           message={this.props.message}
