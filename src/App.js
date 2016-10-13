@@ -3,7 +3,10 @@ import json from '../fixtures/fakedata.json';
 import Sidebar from './Sidebar';
 import MessageBox from './MessageBox';
 
-
+// support for IE8
+if (!Date.now) {
+  Date.now = () => (new Date().getTime())
+}
 
 class App extends Component {
   constructor(props) {
@@ -13,7 +16,7 @@ class App extends Component {
         "id": 1,
         "author": "Jane",
         "timestamp": 1421953410956,
-        "content": "Hello!"
+        "content": "Hello!",
       }],
       message: '',
       username: 'Anonymous',
@@ -28,28 +31,47 @@ class App extends Component {
   componentWillMount() {
     this.setState({
       messages: json.messages,
-    })
+    });
+  }
+
+  componentDidMount() {
+    this.scrollDown();
+  }
+
+  componentDidUpdate() {
+    this.scrollDown();
+  }
+
+  scrollDown() {
+    const element = document.getElementById("messagesArea");
+    element.scrollTop = element.scrollHeight;
   }
 
   handleChangeName(e) {
-    e.preventDefault()
+    e.preventDefault();
     this.setState({
       username: e.target.value,
-    })
+    });
   }
 
   handleChangeMessage(e) {
-    e.preventDefault()
+    e.preventDefault();
     this.setState({
       message: e.target.value,
-    })
+    });
   }
 
   handleSubmitMessage(e) {
-    e.preventDefault()
+    e.preventDefault();
     this.setState({
+      messages: this.state.messages.concat([{
+        "id": this.state.messages[this.state.messages.length - 1].id + 1,
+        "author": this.state.username,
+        "timestamp": Date.now(),
+        "content": this.state.message,
+      }]),
       message: '',
-    })
+    });
   }
 
   render() {

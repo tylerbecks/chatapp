@@ -6,7 +6,7 @@ class Sidebar extends Component {
       <div className="Sidebar">
         <h2>Tiny Chat</h2>
         <strong>Your username:</strong>
-        <form>
+        <form onSubmit={e => {e.preventDefault()}}>
           <input 
             className="changeNameForm"
             type="text"

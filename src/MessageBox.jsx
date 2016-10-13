@@ -4,11 +4,6 @@ import MessageForm from './MessageForm';
 
 class Messagebox extends Component {
 
-  componentDidMount() {
-    const element = document.getElementById("messagesArea");
-    element.scrollTop = element.scrollHeight;
-  }
-
   render() {
     return (
       <div className="Messagebox">
