@@ -3,7 +3,6 @@ import Message from './Message';
 import MessageForm from './MessageForm';
 
 class Messagebox extends Component {
-
   render() {
     return (
       <div className="Messagebox">

@@ -1,8 +1,8 @@
 .Messagebox {
-  display: flex;
-  flex-direction: column;
-  flex: 5;
-  justify-content: space-between;
+  @include flexbox();
+  @include flex-direction(column);
+  @include flex(5);
+  @include justify-content(space-between);
   height: 100%;
   h2 {
     margin: 15px 0;
@@ -25,19 +25,19 @@
   // min-height is specified for Firefox overflow issue: 
   // https://github.com/philipwalton/flexbugs#1-minimum-content-sizing-of-flex-items-not-honored
   form {
-    display: flex;
+    @include flexbox();
     min-height: 2rem;
   }
 }
 .messagefield {
-  flex: 5;
+  @include flex(5);
   color: $text-color;
 }
 .messagefield:focus {
   outline: none;
 }
 .messagesubmit {
-  flex: 1;
+  @include flex(1);
   background-color: $accent-color;
   color: $offset-color;
   border: none;
