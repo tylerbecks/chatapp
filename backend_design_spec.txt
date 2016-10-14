@@ -1,1 +1,29 @@
-(here is where your spec/explanation to the tinychat backend developer goes)
+Dear Backend Developer,
+
+File Structure:
+- build/      -- the build folder optimized for production, created with "npm run build"
+- config/     -- webpack configuration for both dev and prod environments
+- fixtures/   -- contains the fakeData.json
+- public/     -- the page template
+- scripts/    -- files that dictate the actions of the npm commands
+- src/        -- contains all of the React components
+- stylesheets -- contains all of the Sass files
+  - base/       -- boilerplate code
+  - components  -- styling for small components, i.e. message component
+  - helpers     -- Sass tools, variables, functions, and mixins
+  - layout      -- styles for the main components of the application
+  - vendor      -- CSS files from external libraries and frameworks
+
+
+I've built out the frontend that interacts with some fake JSON data from a stub file.  For this simple chat application to work, we will need a few things:
+#REST API with the following routes:
+  - Route to GET allMessages
+  - Route to POST newMessage
+  - (Future) Route to PUT messageEdit with query string = 'MessageId'
+
+#Realtime Updates
+With the server set up and hosted, we can implement socket.io for real-time message updates from other users.
+Every time a user posts a new message, it would broadcast the message out to the other users.  Similarly, whenever a user edits a message, it would broadcast the edit to other users.
+
+#Database
+Without user authorization, there is no need for an RDB. MongoDB would be a suitable choice here.  However, if we add the ability for users to sign up and log in, a relational database like MySQL or PostgreSQL would be a wise choice.

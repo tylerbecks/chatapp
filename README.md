@@ -1,6 +1,6 @@
 # A React chat app
 This is a simple chat app made with React and Sass.
-Run "npm start" to run the development server.
+Run "npm start" to run the app in development mode.
 Run "npm run build" to create a production-ready build folder.
 
 == README ==
