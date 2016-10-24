@@ -12,15 +12,9 @@ class App extends Component {
   constructor(props) {
     super();
     this.state = {
-      messages: [{
-        "id": 1,
-        "author": "Jane",
-        "timestamp": 1421953410956,
-        "content": "Hello!",
-      }],
+      messages: [],
       message: '',
       username: 'Anonymous',
-      users: ['Aaron', 'Thomas', 'Cindy'],
     }
 
     this.handleChangeName = this.handleChangeName.bind(this);
